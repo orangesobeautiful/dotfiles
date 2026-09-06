@@ -31,7 +31,10 @@ elif [[ -f "$HOME/.antidote/antidote.zsh" ]]; then
 fi
 
 if command -v antidote >/dev/null 2>&1; then
-  antidote bundle < "$HOME/.zsh_plugins.txt" > "$HOME/.zsh_plugins.zsh"
+  if [[ ! -f "$HOME/.zsh_plugins.zsh" || "$HOME/.zsh_plugins.txt" -nt "$HOME/.zsh_plugins.zsh" ]]; then
+    antidote bundle < "$HOME/.zsh_plugins.txt" > "$HOME/.zsh_plugins.zsh"
+  fi
+
   source "$HOME/.zsh_plugins.zsh"
 fi
 
