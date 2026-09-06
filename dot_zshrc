@@ -53,10 +53,5 @@ else
   compinit -C
 fi
 
-# fzf completion
-if command -v fzf >/dev/null 2>&1 && [[ -f /usr/share/fzf/completion.zsh ]]; then
-  source /usr/share/fzf/completion.zsh
-fi
-
 # Starship prompt
 command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
