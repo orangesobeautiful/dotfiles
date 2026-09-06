@@ -58,9 +58,5 @@ if command -v fzf >/dev/null 2>&1 && [[ -f /usr/share/fzf/completion.zsh ]]; the
   source /usr/share/fzf/completion.zsh
 fi
 
-# Atuin
-[[ -f "$HOME/.atuin/bin/env" ]] && . "$HOME/.atuin/bin/env"
-command -v atuin >/dev/null 2>&1 && eval "$(atuin init zsh --disable-up-arrow)"
-
 # Starship prompt
 command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
