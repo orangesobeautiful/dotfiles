@@ -22,6 +22,9 @@ setopt extended_history
 # Keybindings
 [[ -f "$HOME/.config/zsh/keybindings.zsh" ]] && source "$HOME/.config/zsh/keybindings.zsh"
 
+# Tools
+[[ -f "$HOME/.config/zsh/tools.zsh" ]] && source "$HOME/.config/zsh/tools.zsh"
+
 # Basic options
 setopt interactivecomments
 setopt no_beep
