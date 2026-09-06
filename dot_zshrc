@@ -58,9 +58,6 @@ if command -v fzf >/dev/null 2>&1 && [[ -f /usr/share/fzf/completion.zsh ]]; the
   source /usr/share/fzf/completion.zsh
 fi
 
-# zoxide
-command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
-
 # Atuin
 [[ -f "$HOME/.atuin/bin/env" ]] && . "$HOME/.atuin/bin/env"
 command -v atuin >/dev/null 2>&1 && eval "$(atuin init zsh --disable-up-arrow)"
