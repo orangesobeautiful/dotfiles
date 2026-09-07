@@ -1,3 +1,4 @@
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
+olets/zsh-transient-prompt branch:v1
 zsh-users/zsh-syntax-highlighting
