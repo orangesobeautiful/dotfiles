@@ -65,6 +65,7 @@ if command -v antidote >/dev/null 2>&1; then
 fi
 
 # Completion
+zmodload -i zsh/complist
 autoload -Uz compinit
 
 if [[ -n "$HOME/.zcompdump"(#qN.mh+24) ]]; then
@@ -72,3 +73,7 @@ if [[ -n "$HOME/.zcompdump"(#qN.mh+24) ]]; then
 else
   compinit -C
 fi
+
+unsetopt menu_complete
+setopt auto_menu
+zstyle ':completion:*:*:*:*:*' menu select
