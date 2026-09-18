@@ -52,11 +52,15 @@ fi
 # Antidote
 if [[ -f /usr/share/zsh-antidote/antidote.zsh ]]; then
   source /usr/share/zsh-antidote/antidote.zsh
+elif [[ -f /opt/homebrew/opt/antidote/share/antidote/antidote.zsh ]]; then
+  source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+elif [[ -f /usr/local/opt/antidote/share/antidote/antidote.zsh ]]; then
+  source /usr/local/opt/antidote/share/antidote/antidote.zsh
 elif [[ -f "$HOME/.antidote/antidote.zsh" ]]; then
   source "$HOME/.antidote/antidote.zsh"
 fi
 
-if command -v antidote >/dev/null 2>&1; then
+if typeset -f antidote >/dev/null 2>&1; then
   if [[ ! -f "$HOME/.zsh_plugins.zsh" || "$HOME/.zsh_plugins.txt" -nt "$HOME/.zsh_plugins.zsh" ]]; then
     antidote bundle < "$HOME/.zsh_plugins.txt" > "$HOME/.zsh_plugins.zsh"
   fi
