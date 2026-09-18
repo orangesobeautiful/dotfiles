@@ -24,7 +24,7 @@ brew install git chezmoi antidote starship atuin fzf zoxide mise
 macOS already includes zsh.
 
 ```bash
-chezmoi init --apply git@github.com:orangesobeautiful/dotfiles.git
+chezmoi init --apply https://github.com/orangesobeautiful/dotfiles.git
 ```
 
 ## Notes
