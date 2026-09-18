@@ -13,6 +13,16 @@ Personal dotfiles managed by [chezmoi](https://www.chezmoi.io/).
 
 ## Install
 
+### macOS prerequisites
+
+Install [Homebrew](https://brew.sh/) first, then install chezmoi and the tools initialized by these dotfiles:
+
+```bash
+brew install git chezmoi antidote starship atuin fzf zoxide mise
+```
+
+macOS already includes zsh.
+
 ```bash
 chezmoi init --apply git@github.com:orangesobeautiful/dotfiles.git
 ```
